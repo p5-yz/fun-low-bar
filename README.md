@@ -10,6 +10,8 @@
 
 On this sprint we'll implement lowbar.js, our own version of the popular utilities library lodash.js. The methods you should implement are listed below, but feel free to implement any others you find interesting if you finish.
 
+*Do not use higher-order native array methods such as `map`, `filter` & `reduce` in your implementation* so you can gain a deeper understanding of what these methods do under the hood.
+
 ## Core
 
 These are the core functions you should aim to get finished. Note that some of these names will look familiar, but you need to check the documentation as they may offer additional functionality.
