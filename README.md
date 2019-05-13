@@ -21,17 +21,22 @@ These are the core functions you should aim to get finished. Note that some of t
 
 • fromPairs
 
+• take
+
 • fill
+
+• once 
+NOTE: you can ignore the _this_ binding of the created function
+
+• before
+NOTE: you can ignore the _this_ binding of the created function
+
+• after
+NOTE: you can ignore the _this_ binding of the created function
 
 • map
 
 • filter
-
-• reduce
-
-• once
-
-• before
 
 • spread
 
@@ -56,6 +61,8 @@ You should be heavily referencing the APIs of the following:
 • remove
 
 • shuffle
+
+• reduce
 
 • conformsTo
 
