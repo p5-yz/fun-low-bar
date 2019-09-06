@@ -40,8 +40,6 @@ NOTE: you can ignore the _this_ binding of the created function
 
 • spread
 
-• after
-
 • overArgs
 
 
