@@ -38,8 +38,6 @@ NOTE: you can ignore the _this_ binding of the created function
 
 • filter
 
-• spread
-
 • overArgs
 
 
