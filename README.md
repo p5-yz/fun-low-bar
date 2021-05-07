@@ -10,76 +10,30 @@
 
 On this sprint we'll implement lowbar.js, our own version of the popular utilities library lodash.js. The methods you should implement are listed below, but feel free to implement any others you find interesting if you finish.
 
-*Do not use higher-order native array methods such as `map`, `filter` & `reduce` in your implementation* so you can gain a deeper understanding of what these methods do under the hood.
+_Do not use higher-order native array methods such as `map`, `filter`, `reduce`, `forEach` in your implementation_ so you can gain a deeper understanding of how these methods work behind the scenes.
 
-## Core
+You should be heavily referencing the [lodash](https://lodash.com/docs/4.17.4/) documentation to understand how your functions should work.
 
-These are the core functions you should aim to get finished. Note that some of these names will look familiar, but you need to check the documentation as they may offer additional functionality.
+The following are the lodash functions that you should aim to implement your own versions of using TDD. Note that some of these names will look familiar, but you need to check the documentation as they may offer additional functionality.
 
+- `_.identity`
+- `_.fromPairs`
+- `_.map`
+- `_.filter`
+- `_.forEach` - You will _need_ to use [jest - Mock Functions](https://jestjs.io/docs/mock-functions) to test your implementation of this!
+- `_.invert`
+- `_.zip`
+- `_.fill`
+- `_.find`
 
-• identity
+## Advanced Tasks
 
-• fromPairs
+- `_.chunk`
+- `_.remove`
+- `_.shuffle`
+- `_.reduce`
+- `_.intersection`
 
-• take
+## Super Advanced Tasks
 
-• fill
-
-• once 
-NOTE: you can ignore the _this_ binding of the created function
-
-• before
-NOTE: you can ignore the _this_ binding of the created function
-
-• after
-NOTE: you can ignore the _this_ binding of the created function
-
-• map
-
-• filter
-
-• overArgs
-
-
-
-You should be heavily referencing the APIs of the following:
-
-1. [lodash](https://lodash.com/docs/4.17.4/)
-2. [The Chai Assertion Library](http://chaijs.com/)
-3. [Testing with spies](http://sinonjs.org/)
-
-
-### Advanced
-
-
-• chunk
-
-• remove
-
-• shuffle
-
-• reduce
-
-• conformsTo
-
-• sortedIndex
-
-• sortBy
-
-• difference
-
-• intersection
-
-• delay
-
-
-### *Very* Advanced
-
-• partial
-
-• memoize 
-    NOTE: You do not need to attempt the second argument (resolver) or making the cache property available.
-
-• invoke
-
-• invokeMap
+- Pick some more lodash functions yourself to re-implement with TDD
