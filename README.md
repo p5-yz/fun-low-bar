@@ -36,4 +36,4 @@ The following are the lodash functions that you should aim to implement your own
 
 ## Super Advanced Tasks
 
-- Pick some more lodash functions yourself to re-implement with TDD
+- Pick some more lodash functions yourself (from the `Arrays` or `Collections` sections of their documentation) to re-implement with TDD.
