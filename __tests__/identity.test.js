@@ -6,8 +6,10 @@ describe('#identity', () => {
     expect(_.identity('hello')).toBe('hello');
     expect(_.identity(true)).toBe(true);
   });
-  test('returns a reference to the same reference type passed as an argument', () => {
+  test('return value has the same reference when passed an array or object', () => {
     const arr = [];
-    expect(_.identity(arr)).toEqual(arr);
+    expect(_.identity(arr)).toBe(arr);
+    const obj = {};
+    expect(_.identity(obj)).toBe(obj);
   });
 });
