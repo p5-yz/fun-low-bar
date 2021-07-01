@@ -16,7 +16,7 @@ You should be heavily referencing the [lodash](https://lodash.com/docs/4.17.4/) 
 
 The following are the lodash functions that you should aim to implement your own versions of using TDD. Note that some of these names will look familiar, but you need to check the documentation as they may offer additional functionality.
 
-- `_.identity`
+- `_.identity` - **this function has had two tests written and been implemented for you already**
 - `_.fromPairs`
 - `_.map`
 - `_.filter`
