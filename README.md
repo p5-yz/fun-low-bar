@@ -18,6 +18,7 @@ The following are the lodash functions that you should aim to implement your own
 
 - `_.identity` - **Note: this function and the tests have already been written for you**
 - `_.fromPairs`
+- `_.times` - You will _need_ to use [jest - Mock Functions](https://jestjs.io/docs/mock-functions) to test your implementation of this!
 - `_.map`
 - `_.filter`
 - `_.forEach` - You will _need_ to use [jest - Mock Functions](https://jestjs.io/docs/mock-functions) to test your implementation of this!
@@ -27,6 +28,8 @@ The following are the lodash functions that you should aim to implement your own
 - `_.find`
 
 ## Advanced Tasks
+
+You _may_ need to use [jest - Mock Functions](https://jestjs.io/docs/mock-functions) to test your implementation of this!
 
 - `_.chunk`
 - `_.remove`
