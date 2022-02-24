@@ -19,11 +19,9 @@ The following are the lodash functions that you should aim to implement your own
 - `_.identity` - **Note: this function and the tests have already been written for you**
 - `_.fromPairs`
 - `_.times`
-- `_.sample` - You will _need_ to use [jest - Mock Functions](https://jestjs.io/docs/mock-functions) to test your implementation of this to prove that you are using `Math.random()`!
 - `_.map`
 - `_.filter`
-- `_.shuffle` - You will _need_ to use [jest - Mock Functions](https://jestjs.io/docs/mock-functions) to test your implementation of this to prove that you are using `Math.random()`!
-- `_.forEach` - You will _need_ to use [jest - Mock Functions](https://jestjs.io/docs/mock-functions) to test your implementation of this to prove that you are invoking the iteratee function for each item in the array with the correct arguments`!
+- `_.forEach`
 - `_.invert`
 - `_.zip`
 - `_.fill`
@@ -32,11 +30,14 @@ The following are the lodash functions that you should aim to implement your own
 ## Advanced Tasks
 
 You _may_ need to use [jest - Mock Functions](https://jestjs.io/docs/mock-functions) to test your implementation of these!
+There's a little video primer [here](https://youtu.be/mgsI-46i0Bk)
 
+- `_.sample`
+- `_.shuffle`
 - `_.chunk`
+- `_.intersection`
 - `_.remove`
 - `_.reduce`
-- `_.intersection`
 
 ## Super Advanced Tasks
 
