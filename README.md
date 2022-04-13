@@ -30,7 +30,6 @@ The following are the lodash functions that you should aim to implement your own
 ## Advanced Tasks
 
 You _may_ need to use [jest - Mock Functions](https://jestjs.io/docs/mock-functions) to test your implementation of these!
-There's a little video primer [here](https://youtu.be/mgsI-46i0Bk)
 
 - `_.sample`
 - `_.shuffle`
