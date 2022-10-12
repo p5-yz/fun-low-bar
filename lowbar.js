@@ -1,7 +1,5 @@
-const _ = {};
-
-_.identity = (x) => {
+function identity(x) {
   return x;
-};
+}
 
-module.exports = _;
+module.exports = { identity };
