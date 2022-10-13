@@ -14,29 +14,33 @@ _Do not use higher-order native array methods such as `map`, `filter`, `reduce`,
 
 You should be heavily referencing the [lodash](https://lodash.com/docs/4.17.4/) documentation to understand how your functions should work.
 
-The following are the lodash functions that you should aim to implement your own versions of using TDD. Note that some of these names will look familiar, but you need to check the documentation as they may offer additional functionality.
+The following are the names of the lodash functions that you should aim to implement your own versions of using TDD. Note that some of these names will look familiar, but you need to check the documentation as they may offer additional functionality.
 
-- `_.identity` - **Note: this function and the tests have already been written for you**
-- `_.fromPairs`
-- `_.times`
-- `_.map`
-- `_.filter`
-- `_.forEach`
-- `_.invert`
-- `_.zip`
-- `_.fill`
-- `_.find`
+- `identity` - **Note: this function and the tests have already been written for you**
+- `fromPairs`
+- `times`
+- `map`
+- `filter`
+- `forEach`
+- `invert`
+- `zip`
+- `fill`
+- `find`
 
 ## Advanced Tasks
 
-You _may_ need to use [jest - Mock Functions](https://jestjs.io/docs/mock-functions) to test your implementation of these!
+Sometimes mock functions of our own creation do not allow us to capture and assert the behaviours we need to. Luckily, there are frameworks that have created their own mock functions with additional behaviour that we can use in our code. Take a look at [this supplementary lecture](https://youtu.be/4My60UEhPCc) about how we can utilise `Jest Mock Functions`
 
-- `_.sample`
-- `_.shuffle`
-- `_.chunk`
-- `_.intersection`
-- `_.remove`
-- `_.reduce`
+You _may_ need to use these [Jest Mock Functions](https://jestjs.io/docs/mock-functions) to test your implementation of the methods below!
+
+The docs should always be your first point of call for information but the [notes](https://notes.northcoders.com/courses/js-fundamentals/testing-higher-order-functions) could be useful and you have an extra `testing-side-effects.md` file in this repo too!
+
+- `sample`
+- `shuffle`
+- `chunk`
+- `intersection`
+- `remove`
+- `reduce`
 
 ## Super Advanced Tasks
 
