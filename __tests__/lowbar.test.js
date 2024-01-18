@@ -1,4 +1,4 @@
-const { identity, fromPairs, sumBy } = require('../lowbar');
+const { identity, fromPairs, sumBy, maxBy } = require('../lowbar');
 
 // don't forget to export and import each of your new functions!
 
@@ -16,41 +16,41 @@ describe('identity', () => {
   });
 });
 
-// describe('recieve an array of arrays and output a new object containing the key value pairs of the sub arrays', () => {
-//   test('Should return an object', () => {
-//     // arrange
-//     const input = [[]]
-//     // act
-//     const returnValue = fromPairs(input);
-//     // assert
-//     expect(typeof returnValue === 'object' && !Array.isArray(returnValue)).toBe(true);
-//   });
-//   test('Should return an object containing the correct key value pair for a single array', () => {
-//     // arrange
-//     const input = [['a', 1]];
-//     // act
-//     const returnValue = fromPairs(input);
-//     // assert
-//     expect(returnValue).toEqual({a: 1});
-//   });
-//   test('should return correct output if given two arrays', () => {
-//     // arrange
-//     const input = [['a', 1], ['b', 2]];
-//     // act
-//     const returnValue = fromPairs(input);
-//     // assert
-//     expect(returnValue).toEqual({a: 1, b: 2});
-//   });
-//   test('Should not mutate input array', () => {
-//     // arrange
-//     const input = [['a', 1], ['b', 2]];
-//     const inputRefrence = [['a', 1], ['b', 2]];
-//     // act
-//     fromPairs(input);
-//     // assert
-//     expect(input).toEqual(inputRefrence);
-//   });
-// });
+describe('recieve an array of arrays and output a new object containing the key value pairs of the sub arrays', () => {
+  test('Should return an object', () => {
+    // arrange
+    const input = [[]]
+    // act
+    const returnValue = fromPairs(input);
+    // assert
+    expect(typeof returnValue === 'object' && !Array.isArray(returnValue)).toBe(true);
+  });
+  test('Should return an object containing the correct key value pair for a single array', () => {
+    // arrange
+    const input = [['a', 1]];
+    // act
+    const returnValue = fromPairs(input);
+    // assert
+    expect(returnValue).toEqual({a: 1});
+  });
+  test('should return correct output if given two arrays', () => {
+    // arrange
+    const input = [['a', 1], ['b', 2]];
+    // act
+    const returnValue = fromPairs(input);
+    // assert
+    expect(returnValue).toEqual({a: 1, b: 2});
+  });
+  test('Should not mutate input array', () => {
+    // arrange
+    const input = [['a', 1], ['b', 2]];
+    const inputRefrence = [['a', 1], ['b', 2]];
+    // act
+    fromPairs(input);
+    // assert
+    expect(input).toEqual(inputRefrence);
+  });
+});
 describe('recieves an array and a function and returns the sum of the array after being passed to the function', () => {
   test('Should return a number', ()=> {
   //arrange
@@ -103,3 +103,77 @@ describe('recieves an array and a function and returns the sum of the array afte
     })
 
 })
+
+describe('function should take an array and return the greatest value in the array after being passed through a function', () => {
+  test('should return undefined if array is empty', () => {
+    // arrange
+    const input = []
+    const callback = jest.fn()
+    // act
+    const returnValue = maxBy(input, callback);
+    // assert
+    expect(returnValue).toBe(undefined);
+  });
+  test('when given an array of 1 item return that item', () => {
+    // arrange
+    const input = [1]
+    const callback = jest.fn()
+    // act
+    const returnValue = maxBy(input, callback);
+    // assert
+    expect(returnValue).toBe(1);
+  });
+  test('callback function is not called for empty arrays', () => {
+    // arrange
+    const input = []
+    const callback = jest.fn()
+    // act
+    const returnValue = maxBy(input, callback);
+    // assert
+    expect(callback).not.toHaveBeenCalled();
+  });
+  test('callback is called the array length number of times', () => {
+    // arrange
+    const input = [1, 2, 3];
+    const callback = jest.fn();
+    // act
+    const returnValue = maxBy(input, callback);
+    // assert
+    expect(callback).toHaveBeenCalledTimes(3);
+  });
+  test('should return highest number in array', () => {
+    // arrange
+    const input = [1, 2, 5, 3];
+    const callback = identity;
+    // act
+    const returnValue = maxBy(input, callback);
+    // assert
+    expect(returnValue).toEqual(5)
+  });
+  test('should return correct value when given an array of objects', () => {
+    // arrange
+    const input = [{ 'n': 1 }, { 'n': 2 }];
+    function objValue(o) {
+      return o.n
+    };
+    const callback = objValue;
+    // act
+    const returnValue = maxBy(input, callback);
+    // assert
+    expect(returnValue).toEqual({ 'n': 2 })
+  });
+  test('should not mutate original array', () => {
+    // arrange
+    const input = [{ 'n': 1 }, { 'n': 2 }];
+    const inputRefrence = [{ 'n': 1 }, { 'n': 2 }];
+    function objValue(o) {
+      return o.n;
+    };
+    const callback = objValue;
+    // act
+    const returnValue = maxBy(input, callback);
+    // assert
+    expect(input).toEqual(inputRefrence);
+  });
+
+});
